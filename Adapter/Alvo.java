@@ -11,8 +11,8 @@ package Adapter;
  */
 public interface Alvo {
     
-    public int soma(int v1, int v2);
+    public void multiplica(int v1, int v2);
     
-    public int subtrai(int v1, int v2);
+    public void divide(int v1, int v2);
     
 }

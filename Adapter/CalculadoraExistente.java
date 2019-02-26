@@ -10,24 +10,20 @@ package Adapter;
  * @author José Aurélio
  */
 public class CalculadoraExistente {
-    private int resultado = 0;
-    public int multiplica(int v1, int v2){                
-        if (v1 > v2){
-            resultado = v1 + v1;
-        }
-        else if(v1 < v2){
-            resultado = v2 + v2;
-        }
-        else if(v1 == 1){
-            resultado = v2;
-        }
-        else if(v2 == 1){
-            resultado = v1;
-        }
-        return resultado;
+    private int v1;
+    private int v2;
+    
+    public int soma(int v1, int v2){
+        this.v1 = v1;
+        this.v2 = v2;
+        
+        return this.v1 + this.v2;
     }
     
-    public int divide(int v1, int v2){
-        return v1 - v2;
+    public int subtrai(int v1, int v2){
+        this.v1 = v1;
+        this.v2 = v2;        
+        
+        return this.v1 - this.v2;
     }
 }

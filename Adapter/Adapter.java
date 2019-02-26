@@ -12,37 +12,41 @@ package Adapter;
 public class Adapter extends CalculadoraExistente implements Alvo{
     private int v1;
     private int v2;
-    private int resultado;
+    private int menor;
+    private int resultado = 0;
     
     @Override
-    public int soma(int v1, int v2) {
+    public void multiplica(int v1, int v2) {
         this.v1 = v1;
         this.v2 = v2;
-
-        if(this.v1 == 1){
-            resultado = super.multiplica(0, this.v2);
-        }
-        else if(this.v2 == 1){
-            resultado = super.multiplica(this.v1, 0);
-        }        
-        else if(this.v1 == 0){
-            resultado = super.multiplica(0, 0);
-        }
-        else if(this.v2 == 0){
-            resultado = super.multiplica(0, 0);
-        }
-        else{
-            resultado = super.multiplica(this.v1, this.v2);
-        }
         
-        return resultado;        
+        if(this.v1 < this.v2)menor = this.v1;
+        else menor = this.v2;
+        
+        for(int i = 0; i < menor; i++){
+            resultado += super.soma(this.v1, this.v2);
+        }
+        System.out.println("O resultado eh"+resultado);        
+       
     }    
 
     @Override
-    public int subtrai(int v1, int v2) {
+    public void divide(int v1, int v2) {
         this.v1 = v1;
         this.v2 = v2;
         
-        return super.divide(this.v1, this.v2);
+        if(this.v1 < this.v2){
+            menor = this.v1;
+            resultado = this.v2;
+        }
+        else {
+            menor = this.v2;
+            resultado = this.v1;
+        }
+        
+        for(int i = 0; i < menor; i++){
+            
+        }
+        
     }
 }
