@@ -20,13 +20,23 @@ public class Adapter extends CalculadoraExistente implements Alvo{
         this.v1 = v1;
         this.v2 = v2;
         
-        if(this.v1 < this.v2)menor = this.v1;
-        else menor = this.v2;
-        
-        for(int i = 0; i < menor; i++){
-            resultado += super.soma(this.v1, this.v2);
+        if(this.v1 < this.v2){
+            menor = this.v1;           
+            for(int i = 0; i < menor; i++){
+                if(menor == 1)resultado = super.soma(0, this.v2);
+                else resultado += super.soma(0, this.v2);                
+            }
         }
-        System.out.println("O resultado eh"+resultado);        
+        else {
+            menor = this.v2;           
+            for(int i = 0; i < menor; i++){
+                if(menor == 1)resultado = super.soma(0, this.v1);
+                else resultado += super.soma(0, this.v1);                
+            }
+        }
+        
+        
+        System.out.println("O resultado eh:" + resultado);        
        
     }    
 

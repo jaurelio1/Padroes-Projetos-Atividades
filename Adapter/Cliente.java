@@ -30,7 +30,7 @@ public class Cliente {
     }
     
     public static void main(String[] args){
-        Cliente cliente = new Cliente(2, 5);
+        Cliente cliente = new Cliente(0, 5);
         
         cliente.multiplica();              
     }

@@ -15,15 +15,13 @@ public class CalculadoraExistente {
     
     public int soma(int v1, int v2){
         this.v1 = v1;
-        this.v2 = v2;
-        
+        this.v2 = v2;        
         return this.v1 + this.v2;
     }
     
     public int subtrai(int v1, int v2){
         this.v1 = v1;
-        this.v2 = v2;        
-        
+        this.v2 = v2;       
         return this.v1 - this.v2;
     }
 }
